@@ -15,7 +15,7 @@ const AdminTicketDetail = () => {
   useEffect(() => {
     const fetchTicket = async () => {
       try {
-        const response = await axios.get(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}`);
+        const response = await axios.get(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}`);
         setTicket(response.data.data);
         setStatus(response.data.data.status);
       } catch (err) {
@@ -29,7 +29,7 @@ const AdminTicketDetail = () => {
 
   const handleStatusChange = async (newStatus) => {
     try {
-      await axios.patch(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}/status`, { status: newStatus });
+      await axios.patch(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}/status`, { status: newStatus });
       setStatus(newStatus);
       setTicket({ ...ticket, status: newStatus });
     } catch (err) {
@@ -42,12 +42,12 @@ const AdminTicketDetail = () => {
     if (!message.trim()) return;
     
     try {
-      await axios.post(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}/reply`, {
+      await axios.post(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}/reply`, {
         sender: 'support',
         message
       });
       // Refresh the ticket to show the new message
-      const response = await axios.get(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}`);
+      const response = await axios.get(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}`);
       setTicket(response.data.data);
       setMessage('');
     } catch (err) {
