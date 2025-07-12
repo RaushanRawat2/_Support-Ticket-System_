@@ -113,6 +113,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const TicketStatusChecker = () => {
   const [email, setEmail] = useState('');
