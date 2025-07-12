@@ -205,6 +205,7 @@ const TicketStatusChecker = () => {
               <div className="mt-4 text-right">
     <Link
       to={`/ticket/${ticket._id}`}
+      state={{ tickets }}
       className="text-blue-600 hover:text-blue-800 text-sm font-medium"
     >
       View Full Details →
