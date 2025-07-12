@@ -126,7 +126,7 @@ const TicketStatusChecker = () => {
     try {
       setLoading(true);
       setError('');
-      const response = await axios.get(`https://support-ticket-system-backend-06na.onrender.com/api/tickets?email=${email}`);
+      const response = await axios.get(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets?email=${email}`);
       setTickets(response.data.data);
     } catch (err) {
       setError('Failed to fetch tickets. Please try again.');
