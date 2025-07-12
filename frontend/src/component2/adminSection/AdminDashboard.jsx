@@ -13,7 +13,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const response = await axios.get('https://support-ticket-system-backend-06na.onrender.com/api/tickets');
+        const response = await axios.get('https://support-ticket-system-backend-6g7z.onrender.com/api/tickets');
         setTickets(response.data.data);
       } catch (err) {
         setError('Failed to fetch tickets');
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
 
   const updateTicketStatus = async (id, status) => {
     try {
-      await axios.patch(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}/status`, { status });
+      await axios.patch(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}/status`, { status });
       setTickets(tickets.map(ticket => 
         ticket._id === id ? { ...ticket, status } : ticket
       ));
