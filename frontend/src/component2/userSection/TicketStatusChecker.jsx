@@ -202,7 +202,7 @@ const TicketStatusChecker = () => {
 
               <div className="mt-4 text-right">
                 <a
-                  href={`/tickets/${ticket._id}`}
+                  href={`/api/tickets/${ticket._id}`}
                   className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
                   View Full Details →
