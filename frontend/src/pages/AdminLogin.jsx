@@ -20,7 +20,7 @@ const AdminLogin = () => {
   const handleSubmit = async e => {
   e.preventDefault();
   try {
-    const res = await axios.post('http://localhost:5000/api/adminLogin', formData);
+    const res = await axios.post('https://support-ticket-system-backend-6g7z.onrender.com/api/adminLogin', formData);
 
     if (res.data.success) {
       setError('');
