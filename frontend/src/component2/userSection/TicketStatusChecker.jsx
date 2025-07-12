@@ -112,6 +112,7 @@ export default TicketStatusChecker;
 import { useState } from 'react';
 import axios from 'axios';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TicketStatusChecker = () => {
   const [email, setEmail] = useState('');
@@ -201,13 +202,13 @@ const TicketStatusChecker = () => {
               )}
 
               <div className="mt-4 text-right">
-                <a
-                  href={`/ticket/${ticket._id}`}
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                >
-                  View Full Details →
-                </a>
-              </div>
+    <Link
+      to={`/ticket/${ticket._id}`}
+      className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+    >
+      View Full Details →
+    </Link>
+  </div>
             </div>
           ))}
         </div>
