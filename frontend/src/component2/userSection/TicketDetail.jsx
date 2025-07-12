@@ -13,7 +13,7 @@ const TicketDetail = () => {
   useEffect(() => {
     const fetchTicket = async () => {
       try {
-        const response = await axios.get(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}`);
+        const response = await axios.get(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}`);
         setTicket(response.data.data);
       } catch (err) {
         setError('Failed to fetch ticket details');
@@ -29,12 +29,12 @@ const TicketDetail = () => {
     if (!message.trim()) return;
     
     try {
-      await axios.post(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}/reply`, {
+      await axios.post(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}/reply`, {
         sender: 'user',
         message
       });
       // Refresh the ticket to show the new message
-      const response = await axios.get(`https://support-ticket-system-backend-06na.onrender.com/api/tickets/${id}`);
+      const response = await axios.get(`https://support-ticket-system-backend-6g7z.onrender.com/api/tickets/${id}`);
       setTicket(response.data.data);
       setMessage('');
     } catch (err) {
