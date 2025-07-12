@@ -44,7 +44,7 @@ const CreateTicketForm = () => {
         data.append('screenshot', formData.screenshot);
       }
 
-      const res = await axios.post('https://support-ticket-system-backend-06na.onrender.com/api/tickets', data);
+      const res = await axios.post('https://support-ticket-system-backend-6g7z.onrender.com/api/tickets', data);
       setSubmittedData(res.data);
       setSubmitted(true);
       setError('');
